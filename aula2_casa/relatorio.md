@@ -42,4 +42,4 @@ Resultado: 500000
 Tempo gasto: 70.72937ms
 ```
 
-Dessa forma, percebe-se que o uso do atomic é muito mais eficiente. Isso porque ele é feito para pequenas instruções de poucos passos, possuindo performance maior.
+Dessa forma, percebe-se que o uso do atomic é muito mais eficiente. Isso porque ele é feito para pequenas instruções de poucos passos, como é o caso do contador, possuindo assim performance maior.
