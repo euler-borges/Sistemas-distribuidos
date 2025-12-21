@@ -33,7 +33,7 @@ fn produtor(id: usize, estado: Arc<EstadoCompartilhado>, quantidade: usize) {
         drop(guard); // solta o lock antes de simular trabalho
 
         // Simula tempo de produção (opcional)
-        thread::sleep(Duration::from_millis(10));
+        // thread::sleep(Duration::from_millis(10));
     }
 
     // sinaliza produtor finalizado
@@ -70,7 +70,7 @@ fn consumidor(id: usize, estado: Arc<EstadoCompartilhado>) {
         if let Some(_item) = item_opt {
             // Processar item fora do lock
             // Simula trabalho
-            thread::sleep(Duration::from_millis(20));
+            // thread::sleep(Duration::from_millis(20));
         }
     }
 }
@@ -83,7 +83,7 @@ fn main() {
     let mut runtime = vec![];
     for run in 1..=runs {
         println!("--- Execução {} de {} ---", run, runs);
-        let capacidade = 10;
+        let capacidade = 100;
         let total_produtores = 3;
         let total_consumidores = 2;
         let itens_por_produtor = 50;
